@@ -1,7 +1,7 @@
 import React from "react";
 
 
-const Photo = props => {
+const MainPage = props => {
 
     const { title, description, imageURL, date } = props;
 
@@ -16,4 +16,4 @@ const Photo = props => {
         </div>
     );
 }
-export default Photo; 
+export default MainPage; 

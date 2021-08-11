@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import axios from 'axios'
-import Photo from './Photo'
+import MainPage from './MainPage'
+import Dropdown from './Dropdown'
 
 function App() {
 
@@ -19,7 +20,8 @@ function App() {
 
   return (
     <div className="App">
-      <Photo 
+      <Dropdown />
+      <MainPage 
          photo={photo} 
          title={photo.title} 
          description={photo.explanation} 
