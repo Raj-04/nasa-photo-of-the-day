@@ -3,7 +3,7 @@ import "./App.css";
 import axios from 'axios'
 import MainPage from './MainPage'
 import DatePicker from './Date'
-import {BASE_URL, API_KEY} from '../constants';
+import {BASE_URL, API_KEY} from './constants';
 
 function App() {
 
