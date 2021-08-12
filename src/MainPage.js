@@ -12,7 +12,7 @@ const MainPage = props => {
                 <Date>{date}</Date>
                <Title> {title}</Title>
                 <Description>{description}</Description>
-                <img src={imageURL} alt="N/A" />
+                <StyledImage src={imageURL} alt="N/A" />
         </Container>
     );
 }
@@ -39,5 +39,10 @@ const Description = styled.p`
 color:#E2E5E2;
 font-family: 'Space Mono', monospace;
 `
+const StyledImage = styled.img`
+  width: 800px;
+  margin-bottom: -4px;
+  box-shadow: 0 0 10px #000000;
+`;
 
 export default MainPage; 
