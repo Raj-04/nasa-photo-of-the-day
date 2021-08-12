@@ -2,13 +2,14 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import axios from 'axios'
 import MainPage from './MainPage'
-import Dropdown from './Dropdown'
+import DatePicker from './Date'
+import {BASE_URL, API_KEY} from '../constants';
 
 function App() {
 
   const [photo, setPhoto] = useState('')
   useEffect(() => {
-    axios.get('https://api.nasa.gov/planetary/apod?api_key=wRHDqDCRNPFIgPqVgisjlD9T4AlrQqRnbo25DqUq')
+    axios.get(`${BASE_URL}api_key=${API_KEY}`)
     .then(res =>{
       console.log(res.data)
       setPhoto(res.data)
@@ -20,7 +21,6 @@ function App() {
 
   return (
     <div className="App">
-      <Dropdown />
       <MainPage 
          photo={photo} 
          title={photo.title} 
@@ -28,6 +28,7 @@ function App() {
          date={photo.date} 
          imageURL={photo.url}
       />
+      <DatePicker />
     </div>
   );
 }
